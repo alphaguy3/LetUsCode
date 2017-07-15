@@ -1,0 +1,57 @@
+.codeformdiv{
+	background-color: white;
+	box-shadow: 0 0 3px rgba(0,0,0,0.25),-1px 0 0 rgba(0,0,0,0.09),2px 0 2px rgba(0,0,0,0.09),0 2px 0 rgba(0,0,0,0.12);
+	padding: 2%;
+	margin: 15px;
+	width: 97%;
+}
+.contestdiv{
+	padding-left:0; 
+}
+.form-horizontal .control-label {
+	padding: 0;
+
+}
+.startsatdiv{
+	padding:2%;
+	line-height: 1.35;
+}
+.delcol{
+	line-height: 5.5;
+	background-color: #E04646;
+}
+.delbtn{
+	background-color: transparent;
+}
+.delbtn i{
+	color: white;
+	font-size: 24px;
+}
+.editcol{
+	line-height: 3.6;
+	background-color: #E04646;
+}
+.editbtn{
+	background-color: transparent;
+}
+.editbtn i{
+	color: white;
+	font-size: 24px;
+}
+.enterdiv{
+	line-height: 2.8;
+}
+.solveddiv{
+	margin-left: 7%;
+}
+.feedbackdiv{
+	background-color: white;
+	margin: 10px;
+	padding: 1%;
+	box-shadow: 0 0 3px rgba(0,0,0,0.25),-1px 0 0 rgba(0,0,0,0.09),2px 0 2px rgba(0,0,0,0.09),0 2px 0 rgba(0,0,0,0.12);
+}
+
+.fdiv{
+	max-height: 600px;
+	overflow-y: scroll;
+}

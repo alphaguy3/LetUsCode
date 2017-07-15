@@ -1,0 +1,46 @@
+body{
+	background: #f5f5f5;
+}
+.orange{
+	color: #FFFFFF;
+    background-color: #F46423;
+    border-color: #DB5C21; 
+}
+.no{
+	margin:0;
+	padding: 0; 
+}
+.nom{
+	margin: 0;
+}
+.nop{
+	padding: 0;
+}
+p{
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-bottom: 0;
+	color: #655A6A;
+}
+
+.hd1{
+	font-family: 'Bungee Inline', cursive;
+}
+.hd3{
+	font-family: 'Suez One', serif;
+}
+.hd4{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

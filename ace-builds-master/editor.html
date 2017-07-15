@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src='../jquery-3.1.0.js'></script>
+<script src='check.js'></script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Editor</title>
+  <style type="text/css" media="screen">
+    body {
+        overflow: hidden;
+    }
+
+    #editor {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+  </style>
+</head>
+<body onload = a();>
+<div style="float:right">
+<label >Document</label>
+        <select id="doc" onChange="a();">
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="java">Java</option>
+        <option value="py">Python</option>
+        </select>
+      </div>
+      <button id ="start" style="float:right;" onclick="full();">click</button>
+      <button id ="end" style="float:right" onclick="end_full();">don't   click</button>
+<pre id="editor" style="height:200px;width:200px">
+</pre>
+
+<script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+function b()
+{
+  a();
+  $('#start').click();
+
+}
+function a(){
+    
+    var editor = ace.edit("editor");
+    var x=$('#doc').val();
+    console.log(x);
+    if(x=='c')
+     {
+      editor.setValue("#include<stdio.h>\n int main()");
+      editor.session.setMode("ace/mode/c_cpp");
+     }
+   else
+    if(x=='cpp')
+     {
+      editor.setValue("new code here1");
+      editor.session.setMode("ace/mode/c_cpp");
+     }
+     else
+    if(x=='java')
+     {
+      editor.setValue("new code here2");
+      editor.session.setMode("ace/mode/java");
+     }
+     else
+    if(x=='py')
+     {
+      editor.setValue("new code here3");
+      editor.session.setMode("ace/mode/python");
+     }
+    var code = editor.getValue();       //---------------------Submit button pe-----------------
+    console.log(code);
+    editor.setTheme("ace/theme/monokai");
+    }
+</script>
+
+</body>
+</html>

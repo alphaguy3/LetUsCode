@@ -1,0 +1,14 @@
+<script>
+$(document).ready(function () {
+    $("#editor").on("contextmenu",function(e){
+        return false;
+    });
+        $(document).keydown(function(event) {
+        if (event.ctrlKey==true && (event.which == '118' || event.which == '86' || event.which == '67' || event.which == '88')) {
+            alert('No cut copy paste :P');
+            event.preventDefault();
+         }
+    });
+});
+
+</script>

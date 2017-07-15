@@ -1,25 +1,41 @@
 <?php
 //Import the SDK 
-require_once ('index.php');
-
+require_once ('./curl_class.php');
+include('function.php');
 //Setting up the Hackerearth API
+$client_secret = apikey();
 $hackerearth = Array(
-		'client_secret' => '9e15b3aab53618fcf501e27ec472d661981c1dda', //(REQUIRED) Obtain this by registering your app at http://www.hackerearth.com/api/register/
+		'client_secret' => apikey(), //(REQUIRED) Obtain this by registering your app at http://www.hackerearth.com/api/register/
         'time_limit' => '5',   //(OPTIONAL) Time Limit (MAX = 5 seconds )
         'memory_limit' => '262144'  //(OPTIONAL) Memory Limit (MAX = 262144 [256 MB])
 	);
 
-//Feeding Data Into Hackerearth API
-$config = Array();
-$config['time']='5';	 	//(OPTIONAL) Your time limit in integer and in unit seconds
-$config['memory']='262144'; //(OPTIONAL) Your memory limit in integer and in unit kb
-$config['source']='#include<stdio.h> int main(){printf("HelloWorld");return 0;}';    	//(REQUIRED) Your properly formatted source code for which you want to use hackerEarth api
-$config['input']='';     	//(OPTIONAL) Properly Formatted Input against which you have to test your source code, leave this empty if you are using file
-$config['language']='C';   //(REQUIRED) Choose any one of the below
-						 	// C, CPP, CPP11, CLOJURE, CSHARP, JAVA, JAVASCRIPT, HASKELL, PERL, PHP, PYTHON, RUBY
 
-//Sending request to the API to compile and run and record JSON responses
-$response = compile($hackerearth,$config); // Use this $response the way you want , it consists data in PHP Array
+$time = '5';
+$memory = '262144' ;
+$source = "test.c";
+$input = "1.txt";
+$lang ='C';
+$compile = "https://api.hackerearth.com/v3/code/compile/";
+$run = "https://api.hackerearth.com/v3/code/run/";
+
+$curl = new curl();
+$res=$curl->get_run($client_secret,$run,$source,$time,$memory,$input,$lang);
+var_dump($res);
+echo "<br>";
+
+foreach($res['run_status'] as $k=>$v)
+		echo $k."--".$v."<br>";
+	echo "\n";
+$ou=$res['run_status']['output'];
+$fil_ou=file_get_contents('out.txt');
+var_dump($fil_ou);
+var_dump($ou);	
+echo $fil_ou."---".$ou."---";
+if($ou==$fil_ou)
+	echo "yes";
+else
+	echo "no";
 //Printing the response
-echo $response['message'];
+//echo $response ;
 ?>

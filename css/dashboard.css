@@ -1,0 +1,200 @@
+
+.mainrow{
+	background: #f5f5f5;
+}
+.leftpanel{
+	background: #2f353f;
+	height: 700px;
+	position: fixed;
+	overflow: hidden;
+	outline: none;
+	display: block;
+}
+@media screen and (max-width: 991px) {
+    .leftpanel{
+		position: relative;
+		height: 450px;
+	}
+}
+
+.rightpanel{
+	height: 1000px;
+}
+
+.logo{
+	padding: 4%;
+	padding-bottom: 0;
+}
+.navigation {
+  margin: 20px 0px 20px;
+}
+
+.navigation > ul > li {
+  position: relative;
+}
+
+.navigation > ul > li > a {
+  display: block;
+  padding: 12px 25px;
+  color: #b4b6bd;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  font-weight: 400;
+  border-left: 3px solid #2f353f;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.navigation > ul > li > a:hover {
+  color: #fff;
+}
+
+.navigation > ul > li:hover > a,
+.navigation > ul > li.active:hover > a,
+.navigation > ul > li.active > a{
+  color: #fff;
+  background: #272c35;
+  border-left: 3px solid #6e8cd7;
+}
+
+.navigation ul li a i {
+  margin-right: 6px;
+  font-size: 18px;
+  width: 25px;
+  float: left;
+}
+
+.navigation ul li a .nav-label {
+  vertical-align: middle;
+}
+
+
+.profiletab{
+	background-color: white;
+	box-shadow: 0 0 3px rgba(0,0,0,0.25),-1px 0 0 rgba(0,0,0,0.09),2px 0 2px rgba(0,0,0,0.09),0 2px 0 rgba(0,0,0,0.12);
+}
+.profilerow{
+	padding: 1%;
+	height: 75px;
+}
+.img{
+	height: 75px;
+	border-radius: 50%;
+}
+.profileinfo{
+	height: 100px;
+}
+.profileimgdiv{
+	border-right: 1px solid rgba(0,0,0,0.08);
+}
+.name{
+	text-transform: uppercase;
+}
+.name h4{
+	font-weight: bolder;
+	color: #737373;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+@media screen and (max-width: 722px) {
+    .img{
+    	display: none;
+    }
+    .imgd{
+    	display: none;
+    }
+}
+.ic{
+	padding-left:30%;
+	padding-top: 40%;
+	padding-bottom: 40%;
+	font-size:28px;
+	color: white;
+}
+.rankdiv h4{
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.chartdiv{
+	background-color: white;
+	margin: 10px;
+	padding: 2%;
+	box-shadow: 0 0 3px rgba(0,0,0,0.25),-1px 0 0 rgba(0,0,0,0.09),2px 0 2px rgba(0,0,0,0.09),0 2px 0 rgba(0,0,0,0.12);
+}
+
+.livecontest{
+	background-color: white;
+	margin: 10px;
+	padding: 1%;
+	box-shadow: 0 0 3px rgba(0,0,0,0.25),-1px 0 0 rgba(0,0,0,0.09),2px 0 2px rgba(0,0,0,0.09),0 2px 0 rgba(0,0,0,0.12);
+}
+
+.hd4live{
+	font-size: 20px;
+	color: #5D75B3;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #5D75B3;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.hdd4{
+	font-size: 20px;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.enterdiv{
+	height: 100%;
+	display:block;
+	line-height:4.3;
+	background:#5D75B3;
+}
+.enterdiv a{
+	color:white;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+	display: block;
+}
+.list-group-item{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.hd4up{
+	font-size: 20px;
+	color: #30A65D;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #30A65D;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.startsatdiv{
+	height: 100%;
+	padding: 5%;
+	display:block;
+	line-height:1.3;
+	background:#30A65D;
+}
+.startsatdiv p{
+	color:white;
+	font-family: 'Roboto Condensed', sans-serif;
+	display: block;
+}
+
+.hd4past{
+	font-size: 20px;
+	color: #DD5138;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #DD5138;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+.viewdiv{
+	height: 100%;
+	display:block;
+	line-height:4.3;
+	background:#DD5138;
+}
+.viewdiv a{
+	color:white;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+	display: block;
+}
